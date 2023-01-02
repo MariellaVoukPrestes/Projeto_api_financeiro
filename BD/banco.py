@@ -4,7 +4,7 @@ from sqlalchemy import Column, Integer, String
 Base = declarative_base()
 
 class cliente(Base):
-    __table
+    __table__ = "cliente"
 
     cpf = Column("cpf", Integer, primary_key = True)
     nome = Column("nome", String(25))
