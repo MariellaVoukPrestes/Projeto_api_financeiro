@@ -1,0 +1,22 @@
+{
+    "cliente": {
+        "nome": "a",
+        "cpf": "151515",
+        "telefone": "151515",
+        "cod_verif": 1515
+    },
+    "produto": [{
+        "nome_prod": "ab",
+        "quatd": 1,
+        "valor_init": 200,
+        "cod_prod": 11
+    },{
+        "nome_prod": "abc",
+        "quatd": 1,
+        "valor_init": 200,
+        "cod_prod": 22
+    }],
+    "valor": 400,
+    "forma": "PIX",
+    "token": "abcd"
+}

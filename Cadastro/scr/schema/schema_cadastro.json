@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "title": "Cadastro",
+    "description": "Api para cadastro de clientes",
+    "type": "object",
+    "required": ["nome", "cpf", "data_nasc", "telefone","endereco", "email", "token"],
+    "properties": {
+        "nome": {"type":"string"},
+        "cpf": {
+            "type":"integer",
+            "enum": [1111, 4855]
+        },
+        "data_nasc": {"type":"string"},
+        "telefone": {"type":"string"},
+        "endereco": {"type":"string"}, 
+        "email": {"type":"string"},
+        "token": {"type":"integer"}
+    }
+}

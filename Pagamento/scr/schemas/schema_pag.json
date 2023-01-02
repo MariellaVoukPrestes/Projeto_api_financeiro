@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "title": "Pagamento",
+    "description": "Api para pagamento de items",
+    "type": "object",
+    "required": ["cliente", "produto", "valor", "forma", "token"],
+    "properties": {
+        "cliente": {
+            "type":"object",
+            "required": ["nome","cpf", "telefone","cod_verif"],
+            "properties": {
+                    "nome": {"type":"string"},
+                    "cpf": {"type": "integer"},
+                    "telefone": {"type": "string"},
+                    "cod_verif": {"type": "string"}
+                }
+            },
+        "produto":{
+            "type":"array",
+            "items": {
+                "type":"object",
+                "required": ["nome_prod", "quatd", "valor_init", "cod_prod"],
+                "properties": {
+                    "nome_prod": {"type":"string"},
+                    "quatd": {"type": "integer"},
+                    "valor_unit": {"type": "number"},
+                    "cod_prod": {"type":"integer"}
+                }
+            }
+        },
+        "valor":{
+            "type":"number"
+        },
+        "forma": {
+            "enum": ["PIX", "CC", "BOLETO'"]
+        },
+        "token":{
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "nome": "teste",
+    "cpf": "1111",
+    "data_nasc": "010101",
+    "telefone": "010101011",
+    "endereco": "rua zero",
+    "email": "teste@gmail.com",
+    "token": "123"
+}
