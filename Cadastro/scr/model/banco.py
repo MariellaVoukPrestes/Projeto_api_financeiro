@@ -1,8 +1,24 @@
 
-from dataclasses import dataclass
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
 
+DATABASE_NAME = "dados.db"
+engine = create_engine(f"sqlite:///{DATABASE_NAME}")
+
+#Criando sessiao
+
+Session = sessionmaker(bind=engine)
+session = Session()
+session.execute("""CREATE TABLE cliente(
+    cpf INTEGER PRIMARY KEY,
+    nome VARCHAR(25),
+    data_nasc VARCHAR(8),
+    telefone VARCHAR(11),
+    endereco VARCHAR(25),
+    email VARCHAR(50),
+    token INTEGER)))""")
 #Criando orm
 Base = declarative_base()
 
@@ -16,14 +32,3 @@ class ClienteTable(Base):
     endereco = Column("endereco", String(25))
     email = Column("email", String(50))
     token = Column("token", Integer)
-
-@dataclass
-class Dados(ClienteTable):
-
-    cpf: int
-    nome: str
-    data_nasc: str
-    telefone: str
-    endereco: str
-    email: str
-    token: int

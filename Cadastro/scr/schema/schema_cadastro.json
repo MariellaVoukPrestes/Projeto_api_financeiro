@@ -8,7 +8,7 @@
         "nome": {"type":"string"},
         "cpf": {
             "type":"integer",
-            "enum": [1111, 4855]
+            "enum": [1111]
         },
         "data_nasc": {"type":"string"},
         "telefone": {"type":"string"},
