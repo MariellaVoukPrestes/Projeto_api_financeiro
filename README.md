@@ -33,7 +33,7 @@
             - codigo de verificação; o sistema ira enviar um codigo de verificação para o telefone do cliente
             Obs: Se o cliente acabou de se registrar ele tambem precisara passar por essa parte para fazer o pagamento
         
-        * sistema tambem pedira informações do intem e de pagamento:
+        * sistema tambem pedira informações do item e de pagamento:
             - nome do produto
             - quatidade
             - valor unitario
